@@ -1,0 +1,89 @@
+/* You can add global styles to this file, and also import other style files */
+
+.vc {
+  /*padding-top: 20%;
+  padding-bottom: 20%;
+  padding-left: 10%;
+  padding-right: 10%;*/
+  padding: 20% 10%;
+}
+
+.inline-control [class*="col-md-"]:first-of-type, .inline-control [class*="col-md-"]:last-of-type {
+  padding: 0px !important;
+}
+
+input {
+  padding-right: 20%;
+  padding-left: 40%;
+  height: 34px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="radio"] {
+  margin-top: -6px !important;
+}
+
+.row {
+  width: 100%;
+}
+
+.heading {
+  text-align: center;
+  padding-bottom: 40px 0px;
+}
+
+.cal{
+  width: 100% !important;
+}
+
+.mat-tab-body {
+padding-top: 20px; 
+}
+
+@media (max-width: 1024px) {
+  .pad-tb {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  .npad-lr {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  #content {
+    padding: 0px 20px;
+  }
+  .pad-t {
+    padding-top: 15px;
+  }
+  .row {
+    margin-left: 0px !important;
+  }
+  .margin-t {
+    margin-top: 15px;
+  }
+  .ui-calendar , .ui-button{
+    width: 100%;
+  }
+  .ui-inputtext {
+    width: 90%;
+  }
+  #cal .ui-calendar .ui-inputtext{
+  width: 100%;
+}
+
+#cal .ui-calendar, .ui-button{
+  width: 100%;
+}
+
+}
+
+#cal .ui-calendar .ui-inputtext{
+  width: 90%;
+}
+
+#cal .ui-calendar{
+  width: 100%;
+}
+

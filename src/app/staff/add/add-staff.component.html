@@ -1,0 +1,27 @@
+<!--<div>
+    <button (click)='tstaff()' class="btn btn-primary btn-lg col-xs-12 col-md-offset-2 col-md-3"> Teaching </button>
+    <button (click)='ntstaff()' class="btn btn-primary btn-lg col-xs-12 col-md-offset-2 col-md-3"> Non-Teaching </button>
+</div>-->
+<div>
+    <md-tab-group>
+        <md-tab label="Teaching">
+            <div>
+                <tl-addtstaff></tl-addtstaff>
+            </div>
+        </md-tab>
+        <md-tab label="Non-Teaching">
+            <div>
+                <tl-addntstaff></tl-addntstaff>
+            </div>
+        </md-tab>
+    </md-tab-group>
+</div>
+<!--<p-tabView orientation="top">
+        <p-tabPanel header="Teaching" [selected]="true">
+            <tl-addtstaff></tl-addtstaff>
+        </p-tabPanel>
+        <p-tabPanel header="Non-Teaching">
+            <tl-addntstaff></tl-addntstaff>
+        </p-tabPanel>
+    </p-tabView>-->
+<!--</div>-->

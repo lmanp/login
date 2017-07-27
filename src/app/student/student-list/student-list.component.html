@@ -1,0 +1,24 @@
+<div class="ui-widget-header col-md-offset-2 col-xs-12 col-md-8" >
+    <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+    <input #gb type="text" placeholder="Search student">
+</div>
+<p-dataTable [value]="students" [rows]="5" [paginator]="true" [(selection)]="selectedStudents" [responsive]="true" class="col-md-offset-1 col-xs-12 col-md-10"
+    [globalFilter]="gb">
+    <p-header> Students List </p-header>
+    <p-column selectionMode="multiple"></p-column>
+    <p-column field="id" header="Id" sortable="true"></p-column>
+    <p-column field="name" header="Name" sortable="true"></p-column>
+    <p-column field="dob" header="DOB" sortable="true">
+        <ng-template let-student="rowData" pTemplate="body"> {{student.dob|date:'shortDate'}}
+        </ng-template>
+    </p-column>
+    <p-column field="grade" header="Grade" sortable="true"></p-column>
+    <p-column header="Action buttons" styleClass="col-button">
+        <ng-template pTemplate="header">
+        </ng-template>
+        <ng-template let-student="rowData" pTemplate="body">
+            <button type="button" pButton (click)="deleteStudent(student.id)" class="col-md-offset-4 ui-button-danger" icon="fa-times"></button>
+            <!--<button type="button" pButton (click)="updateStudent(student.id)" class="ui-button-standard" icon="fa-edit"></button>-->
+        </ng-template>
+    </p-column>
+</p-dataTable>

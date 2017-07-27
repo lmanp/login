@@ -1,0 +1,72 @@
+<form [formGroup]="staff" novalidate (ngSubmit)="createStaff()">
+    <div class="col-md-offset-1 form-group row">
+        <div class="form-group row">
+            <label class="col-xs-12 col-md-2"> Name </label>
+            <div class="col-xs-12 col-md-2">
+                <input class="form-control" type="text" placeholder="Name" formControlName="name">
+                <div>
+                    <small [hidden]="!staff.controls.name.hasError('minlength')">
+                        Minimum 5 characters required.
+                    </small>
+                </div>
+                <div>
+                    <small [hidden]="!(staff.controls.name.hasError('required')) || (notSubmitted && staff.controls.name.pristine)">
+                        Name is required.
+                    </small>
+                </div>
+                <div>
+                    <small [hidden]="!(staff.controls.name.hasError('pattern'))">
+                        No special characters allowed.
+                </small>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-xs-12 col-md-2"> DOB </label>
+            <div class="col-xs-12 col-md-2">
+                <p-calendar name="dob" dateFormat="dd/mm/yy" showIcon="true" id="cal" formControlName="dob"></p-calendar>
+                <small [hidden]="(staff.controls.dob.pristine && notSubmitted) || (staff.controls.dob.valid)">
+                    Date of Birth is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-xs-12 col-md-2"> Subject </label>
+            <div class="col-xs-12 col-md-2">
+                <!--<select class="form-control">
+                    <option selected> Select Subject </option>
+                    <option *ngFor="let subject of subjects"> {{subject.name}}</option>
+                </select>-->
+                <md-select multiple="true" placeholder="Subject" formControlName="subject">
+                    <md-option *ngFor="let subject of subjects" [value]="subject.name">{{ subject.name }}</md-option>
+                </md-select>
+                <small [hidden]="(staff.controls.subject.valid)  || (notSubmitted && staff.controls.subject.pristine)">
+                    Subject is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-xs-12 col-md-2"> Grade </label>
+            <div class="col-xs-12 col-md-2">
+                <input class="form-control" type="text" placeholder="Grade" formControlName="grade">
+                <small [hidden]="!(staff.controls.grade.hasError('required'))  || (notSubmitted && staff.controls.grade.pristine)">
+                    Grade is required.
+                </small>
+                <small [hidden]="!(staff.controls.grade.hasError('pattern')) && !(staff.controls.grade.hasError('max'))">
+                    grade should be between 1 and 10.
+                </small>
+            </div>
+        </div>
+        <div>
+            <tl-address #addr></tl-address>
+        </div>
+        <div class="col-md-offset-2 col-xs-12 col-md-2">
+            <button type="submit" pButton class="ui-button-standard" label="Add"> </button>
+        </div>
+        <div>
+            <small [hidden]="!(staff.valid) && notSubmitted" class="col-md-offset-2 col-xs-12 col-md-3 pad-tb">
+            Staff added successfully.
+        </small>
+        </div>
+    </div>
+</form>
