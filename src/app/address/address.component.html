@@ -1,0 +1,87 @@
+<form [formGroup]="address">
+    <div class="form-group row">
+        <label class="col-xs-12 col-md-2"> Address Line1 </label>
+        <div class="col-xs-12 col-md-6">
+            <input class="form-control" type="text" formControlName="line1">
+        </div>
+        <div>
+            <small [hidden]="(address.controls.line1.valid)  || (notSubmitted && address.controls.line1.pristine)">
+                    Address is required.
+            </small>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-xs-12 col-md-2"> Address Line2 </label>
+        <div class="col-xs-12 col-md-6">
+            <input class="form-control" type="text" formControlName="line2">
+        </div>
+        <div>
+            <small [hidden]="(address.controls.line2.valid)  || (notSubmitted && address.controls.line2.pristine)">
+                    Address is required.
+            </small>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-xs-12 col-md-2"> City </label>
+        <div class="col-xs-12 col-md-6">
+            <input class="form-control" type="text" formControlName="city">
+        </div>
+        <div>
+            <small [hidden]="!(address.controls.city.hasError('required'))  || (notSubmitted && address.controls.city.pristine)">
+                    City is required.
+            </small>
+
+            <small [hidden]="!(address.controls.city.hasError('pattern'))">
+                   City not valid.
+            </small>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-xs-12 col-md-2"> State </label>
+        <div class="col-xs-12 col-md-3">
+            <input class="form-control" type="text" formControlName="state">
+        </div>
+        <label class="pad-t  col-xs-12 col-md-1"> Pincode </label>
+        <div class="col-xs-12 col-md-2">
+            <input class="form-control" type="text" formControlName="pincode">
+        </div>
+        <div>
+            <small [hidden]="!(address.controls.state.hasError('required'))  || (notSubmitted && address.controls.state.pristine)">
+                    State is required.
+            </small>
+            <small [hidden]="!(address.controls.state.hasError('pattern')) ">
+                  State not valid.
+            </small>
+            <small [hidden]="!(address.controls.pincode.hasError('required'))  || (notSubmitted && address.controls.pincode.pristine)">
+                   pincode is required.
+            </small>
+            <small [hidden]="!(address.controls.pincode.hasError('pattern')) ">
+                   pincode not valid.
+            </small>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-xs-12 col-md-2"> Email </label>
+        <div class="col-xs-12 col-md-3">
+            <input class="form-control" type="email" formControlName="email">
+        </div>
+        <label class="col-xs-12 col-md-1"> Phone No. </label>
+        <div class="col-xs-12 col-md-2">
+            <input class="form-control" type="tel" formControlName="phone">
+        </div>
+        <div>
+            <small [hidden]="!(address.controls.email.hasError('required'))  || (notSubmitted && address.controls.email.pristine)">
+                    email is required.
+            </small>
+            <!--<small [hidden]="!(address.controls.phone.hasError('required')) || (notSubmitted && address.controls.phone.pristine)">
+                        Phone number is required.
+            </small>-->
+            <small [hidden]="!(address.controls.email.hasError('pattern')) ">
+                  email not valid.
+            </small>
+            <small [hidden]="!(address.controls.phone.hasError('pattern'))">
+                        Number not valid.
+            </small>
+        </div>
+    </div>
+</form>

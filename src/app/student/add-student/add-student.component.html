@@ -1,0 +1,60 @@
+<form [formGroup]="stud" novalidate (ngSubmit)="createStudent()">
+    <div class="form-group row">
+        <div class="col-md-offset-2 col-xs-12 col-md-3 pad-tb">
+            <input class="form-control" [(ngModel)]="sname" type="text" placeholder="Name" formControlName="name">
+            <div>
+                <small [hidden]="!stud.controls.name.hasError('minlength')">
+                    Minimum 5 characters required.
+                </small>
+            </div>
+            <div>
+                <small [hidden]="!(stud.controls.name.hasError('required')) || (submitted && stud.controls.name.pristine)">
+                    Name is required.
+                </small>
+            </div>
+            <div>
+                <small [hidden]="!(stud.controls.name.hasError('pattern'))">
+                    No special characters allowed.
+                </small>
+            </div>
+            <!--<pre> submitted value :: {{submitted}} 
+                minlength status :: {{stud.controls.name.hasError('minlength')}}
+                Get Error:: {{stud.controls.name.getError('pattern') | json}}
+                Has Error:: {{stud.hasError('pattern', ['name'])}}
+                pattern status {{stud.controls.name.errors | json}}
+            </pre>-->
+        </div>
+        <div class="col-xs-12 col-md-2 pad-tb">
+            <p-calendar [(ngModel)]="sdob" name="dob" dateFormat="dd/mm/yy" showIcon="true" id="cal" formControlName="dob"></p-calendar>
+            <small [hidden]="(stud.controls.dob.pristine && submitted) || (stud.controls.dob.valid)">
+                    Date of Birth is required.
+            </small>
+        </div>
+        <div class="col-xs-12 col-md-2 pad-tb">
+            <input class="form-control" [(ngModel)]="sgrade" type="text" placeholder="Grade" formControlName="grade">
+            <small [hidden]="!(stud.controls.grade.hasError('required'))  || (submitted && stud.controls.grade.pristine)">
+                    Grade is required.
+            </small>
+            <small [hidden]="!(stud.controls.grade.hasError('pattern')) && !(stud.controls.grade.hasError('max'))">
+                    grade should be between 1 and 10.
+            </small>
+        </div>
+        <div class="col-xs-12 col-md-2 pad-tb">
+            <button type="submit" pButton class="ui-button-standard" label="Add"> </button>
+        </div>
+    </div>
+    <div>
+        <div [hidden]="(!( stud.valid))">
+            <small [hidden]="!submitted" class="col-md-offset-2 col-xs-12 col-md-3 pad-tb">
+            Student added successfully.
+            </small>
+        </div>
+        <!--<pre> {{stud.valid}}
+            {{submitted}}
+            {{stud.pristine}}
+            {{stud.controls.name.pristine}}
+            {{stud.controls.dob.pristine}}
+            {{stud.controls.grade.pristine}}
+         </pre>-->
+    </div>
+</form>

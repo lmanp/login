@@ -1,0 +1,73 @@
+<div>
+    <!--<p-tabView orientation="top">
+        <p-tabPanel header="Teaching" [selected]="true">-->
+    <md-tab-group>
+        <md-tab label="Teaching">
+            <div class="ui-widget-header col-md-offset-2 col-xs-12 col-md-8">
+                <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+                <input #gb type="text" placeholder="Search staff">
+            </div>
+            <p-dataTable [value]="tstaff" [rows]="5" [paginator]="true" [(selection)]="selectedStaff" [responsive]="true" class="col-md-offset-1 col-xs-12 col-md-10"
+                [globalFilter]="gb">
+                <p-header> Teaching Staff List </p-header>
+                <p-column selectionMode="multiple"></p-column>
+                <p-column field="id" header="Id" sortable="true"></p-column>
+                <p-column field="name" header="Name" sortable="true"></p-column>
+                <p-column field="dob" header="DOB" sortable="true">
+                    <ng-template let-tstaff="rowData" pTemplate="body"> {{tstaff.dob|date:'d-MMM-y'}}
+                    </ng-template>
+                </p-column>
+                <p-column field="grade" header="Grade" sortable="true"></p-column>
+                <p-column field="subject" header="Subject" sortable="true"></p-column>
+                <p-column header="Action buttons" styleClass="col-button">
+                    <ng-template pTemplate="header">
+                    </ng-template>
+                    <ng-template let-tstaff="rowData" pTemplate="body">
+                        <button type="button" pButton (click)="deleteTstaff(tstaff.id)" class="col-md-offset-4 ui-button-danger" icon="fa-times"></button>
+                        <!--<button type="button" pButton (click)="updateStudent(student.id)" class="ui-button-standard" icon="fa-edit"></button>-->
+                    </ng-template>
+                </p-column>
+                <p-column field="status" header="Working Status" sortable="true">
+                    <ng-template let-tstaff="rowData" pTemplate="body"> {{tstaff.status|status}}
+                    </ng-template>
+                </p-column>
+            </p-dataTable>
+        </md-tab>
+        <md-tab label="Non-Teaching">
+            <div class="ui-widget-header col-md-offset-2 col-xs-12 col-md-8">
+                <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+                <input #gb type="text" placeholder="Search staff">
+            </div>
+            <p-dataTable [value]="ntstaff" [rows]="5" [paginator]="true" [(selection)]="selectedStaff" [responsive]="true" class="col-md-offset-1 col-xs-12 col-md-10"
+                [globalFilter]="gb">
+                <p-header> Non-Teaching Staff List </p-header>
+                <p-column selectionMode="multiple"></p-column>
+                <p-column field="id" header="Id" sortable="true"></p-column>
+                <p-column field="name" header="Name" sortable="true"></p-column>
+                <p-column field="dob" header="DOB" sortable="true">
+                    <ng-template let-ntstaff="rowData" pTemplate="body"> {{ntstaff.dob|date:'d-MMM-y'}}
+                    </ng-template>
+                </p-column>
+                <p-column field="work" header="work" sortable="true"></p-column>
+                <p-column header="Action buttons" styleClass="col-button">
+                    <ng-template pTemplate="header">
+                    </ng-template>
+                    <ng-template let-ntstaff="rowData" pTemplate="body">
+                        <button type="button" pButton (click)="deleteNtstaff(ntstaff.id)" class="col-md-offset-4 ui-button-danger" icon="fa-times"></button>
+                        <!--<button type="button" pButton (click)="updateStudent(student.id)" class="ui-button-standard" icon="fa-edit"></button>-->
+                    </ng-template>
+                </p-column>
+                <p-column field="status" header="Working Status" sortable="true">
+                    <ng-template let-ntstaff="rowData" pTemplate="body"> {{ntstaff.status|status}}
+                    </ng-template>
+                </p-column>
+            </p-dataTable>
+        </md-tab>
+    </md-tab-group>
+
+        <!--</p-tabPanel>
+        <p-tabPanel header="Non-Teaching">
+
+        </p-tabPanel>
+    </p-tabView>-->
+</div>

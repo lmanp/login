@@ -1,0 +1,56 @@
+<form [formGroup]="staff" novalidate (ngSubmit)="createNtstaff()">
+    <div class="col-md-offset-1 form-group row">
+        <div class="form-group row">
+            <label class="col-xs-12 col-md-2"> Name </label>
+            <div class="col-xs-12 col-md-2 pad-tb">
+                <input class="form-control" type="text" placeholder="Name" formControlName="name">
+                <div>
+                    <small [hidden]="!staff.controls.name.hasError('minlength')">
+                    Minimum 5 characters required.
+                </small>
+                </div>
+                <div>
+                    <small [hidden]="!(staff.controls.name.hasError('required')) || (notSubmitted && staff.controls.name.pristine)">
+                    Name is required.
+                </small>
+                </div>
+                <div>
+                    <small [hidden]="!(staff.controls.name.hasError('pattern'))">
+                    No special characters allowed.
+                </small>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-xs-12 col-md-2"> DOB </label>
+            <div class="col-xs-12 col-md-2 pad-tb">
+                <p-calendar name="dob" dateFormat="dd/mm/yy" showIcon="true" id="cal" formControlName="dob"></p-calendar>
+                <small [hidden]="(staff.controls.dob.pristine && notSubmitted) || (staff.controls.dob.valid)">
+                    Date of Birth is required.
+            </small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-xs-12 col-md-2"> Work </label>
+            <div class="col-xs-12 col-md-2 pad-tb">
+                <!--<input class="form-control" type="text" placeholder="Work" formControlName="work">-->
+                <md-select placeholder="Work" formControlName="work">
+                    <!--<option selected> Select Work </option>-->
+                    <md-option *ngFor="let work of work" [value]="work.name" > {{work.name}}</md-option>
+                </md-select>
+                <small [hidden]="!(staff.controls.work.valid)  || (notSubmitted && staff.controls.work.pristine)">
+                    Work is required.
+            </small>
+            </div>
+        </div>
+        <tl-address #addr></tl-address>
+        <div class="col-xs-12 col-md-2 pad-tb">
+            <button type="submit" pButton class="ui-button-standard" label="Add"> </button>
+        </div>
+    </div>
+    <div>
+    <small [hidden]="!(staff.valid) && notSubmitted" class="col-md-offset-2 col-xs-12 col-md-3 pad-tb">
+            Staff added successfully.
+        </small>
+    </div>
+</form>

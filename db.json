@@ -1,0 +1,367 @@
+{
+  "students": [
+    {
+      "name": "priya",
+      "dob": "1992-07-22T04:00:00.000Z",
+      "grade": "6",
+      "id": 7
+    },
+    {
+      "name": "ammulu",
+      "dob": "1992-09-11T04:00:00.000Z",
+      "grade": "7",
+      "id": 8
+    },
+    {
+      "name": "abhi",
+      "dob": "1989-10-15T04:00:00.000Z",
+      "grade": "8",
+      "id": 9
+    },
+    {
+      "name": "janu",
+      "dob": "1994-02-09T05:00:00.000Z",
+      "grade": "4",
+      "id": 10
+    },
+    {
+      "name": "manvi",
+      "dob": "2013-09-22T04:00:00.000Z",
+      "grade": "1",
+      "id": 11
+    },
+    {
+      "name": "dewa",
+      "dob": "2017-07-05T04:00:00.000Z",
+      "grade": "1",
+      "id": 12
+    },
+    {
+      "name": "ew",
+      "dob": "2017-07-14T04:00:00.000Z",
+      "grade": "3",
+      "id": 13
+    },
+    {
+      "name": "kjhdba",
+      "dob": "2017-07-10T04:00:00.000Z",
+      "grade": "1",
+      "id": 14
+    },
+    {
+      "name": "hdkugfa",
+      "dob": "2017-07-27T04:00:00.000Z",
+      "grade": "4",
+      "id": 15
+    },
+    {
+      "name": "fgh",
+      "dob": "2017-07-06T04:00:00.000Z",
+      "grade": "9",
+      "id": 16
+    },
+    {
+      "name": "babbu",
+      "dob": "2015-07-07T04:00:00.000Z",
+      "grade": "0",
+      "id": 17
+    },
+    {
+      "name": "bhiwabdv",
+      "dob": "2017-07-13T04:00:00.000Z",
+      "grade": "6",
+      "id": 18
+    },
+    {
+      "name": "abcdef",
+      "dob": "2017-07-06T04:00:00.000Z",
+      "grade": "12",
+      "id": 19
+    },
+    {
+      "name": "jsbhdab",
+      "dob": "2017-07-21T04:00:00.000Z",
+      "grade": "2",
+      "id": 20
+    },
+    {
+      "name": "gduavc",
+      "dob": "2017-07-20T04:00:00.000Z",
+      "grade": "1",
+      "id": 21
+    },
+    {
+      "name": "jdsna",
+      "dob": "2017-07-10T04:00:00.000Z",
+      "grade": "1",
+      "id": 22
+    },
+    {
+      "name": "vdhas",
+      "dob": "2017-07-10T04:00:00.000Z",
+      "grade": "1",
+      "id": 23
+    },
+    {
+      "name": "dfawef",
+      "dob": "2017-07-10T04:00:00.000Z",
+      "grade": "1",
+      "id": 24
+    },
+    {
+      "name": "hfgadsv",
+      "dob": "2017-07-18T04:00:00.000Z",
+      "grade": "1",
+      "id": 25
+    },
+    {
+      "name": "khdac",
+      "dob": "2017-07-03T04:00:00.000Z",
+      "grade": "1",
+      "id": 26
+    }
+  ],
+  "login": [
+    {
+      "userid": "priya",
+      "pwd": "priya@123"
+    },
+    {
+      "userid": "abhi",
+      "pwd": "abhi@123"
+    },
+    {
+      "userid": "janu",
+      "pwd": "janu@123"
+    },
+    {
+      "userid": "ammulu",
+      "pwd": "ammulu@123"
+    }
+  ],
+  "teachingstaff": [
+    {
+      "id": 1,
+      "name": "sdhvafjh",
+      "dob": "1989-10-15T04:00:00.000Z",
+      "grade": "2",
+      "subject": "english",
+      "status": "true"
+    },
+    {
+      "id": 2,
+      "name": "sdfj",
+      "dob": "1984-12-09T04:00:00.000Z",
+      "grade": "5",
+      "subject": "maths"
+    },
+    {
+      "id": 3,
+      "name": "sgkagh",
+      "dob": "1995-09-05T04:00:00.000Z",
+      "grade": "6",
+      "subject": "science",
+      "status": "true"
+    },
+    {
+      "id": 4,
+      "name": "fjhabgh",
+      "dob": "1980-05-15T04:00:00.000Z",
+      "grade": "5",
+      "subject": "telugu",
+      "status": "true"
+    },
+    {
+      "id": 5,
+      "name": "cfsgvf",
+      "dob": "1990-06-15T04:00:00.000Z",
+      "grade": "8",
+      "subject": "social",
+      "status": "true"
+    },
+    {
+      "name": "priya",
+      "dob": "1992-07-22T04:00:00.000Z",
+      "subject": [
+        "Maths",
+        "English"
+      ],
+      "grade": "1",
+      "id": 6
+    },
+    {
+      "name": "vkGHclA",
+      "dob": "1989-07-04T04:00:00.000Z",
+      "subject": [
+        "Science",
+        "Telugu"
+      ],
+      "grade": "4",
+      "id": 7,
+      "status": "true"
+    },
+    {
+      "name": "vkgfbdfnbv",
+      "dob": "1990-07-05T04:00:00.000Z",
+      "subject": [
+        "Science",
+        "Telugu"
+      ],
+      "grade": "3",
+      "id": 8,
+      "status": "true"
+    },
+    {
+      "name": "vgzbla",
+      "dob": "2017-07-12T04:00:00.000Z",
+      "subject": [
+        "Telugu"
+      ],
+      "grade": "5",
+      "id": 9
+    },
+    {
+      "name": "vicGVCkA",
+      "dob": "1999-07-12T04:00:00.000Z",
+      "subject": [
+        "Social",
+        "English"
+      ],
+      "grade": "5",
+      "address": {},
+      "id": 10,
+      "status": "true"
+    },
+    {
+      "name": "bfhjlsl",
+      "dob": "2017-07-19T04:00:00.000Z",
+      "subject": [
+        "Telugu"
+      ],
+      "grade": "5",
+      "address": {
+        "line1": "nlkdfjza",
+        "line2": "jnfjksn",
+        "city": "jskfans",
+        "state": "ksfjnlsa",
+        "pincode": "3784682",
+        "email": "flsdjnv",
+        "phone": "2136131"
+      },
+      "id": 11
+    },
+    {
+      "name": "trewq",
+      "dob": "2017-07-11T04:00:00.000Z",
+      "subject": [
+        "English"
+      ],
+      "grade": "3",
+      "id": 12
+    },
+    {
+      "name": "gskcvzas",
+      "dob": "2017-07-04T04:00:00.000Z",
+      "subject": [
+        "Telugu"
+      ],
+      "grade": "4",
+      "id": 13,
+      "status": "true"
+    },
+    {
+      "name": "bhkfs",
+      "dob": "2017-07-04T04:00:00.000Z",
+      "subject": [
+        "Telugu"
+      ],
+      "grade": "4",
+      "id": 14,
+      "status": "true"
+    },
+    {
+      "name": "priya",
+      "dob": "1992-07-22T04:00:00.000Z",
+      "subject": [
+        "Arts",
+        "Maths"
+      ],
+      "grade": "8",
+      "status": true,
+      "address": {
+        "line1": "11-33-960",
+        "line2": "VR Nagar, kavali",
+        "city": "Nellore",
+        "state": "AP",
+        "pincode": "524201",
+        "email": "bannu.dot@gmail.com",
+        "phone": "9494582096"
+      },
+      "id": 15
+    }
+  ],
+  "nonteachstaff": [
+    {
+      "id": 1,
+      "name": "akdhfv",
+      "dob": "1980-05-15T04:00:00.000Z",
+      "work": "Clerical"
+    },
+    {
+      "id": 2,
+      "name": "akdhfv",
+      "dob": "1980-05-15T04:00:00.000Z",
+      "work": "Coach",
+      "status": "true"
+    },
+    {
+      "id": 3,
+      "name": "akdhfv",
+      "dob": "1980-05-15T04:00:00.000Z",
+      "work": "Gardening",
+      "status": "true"
+    },
+    {
+      "id": 4,
+      "name": "akdhfv",
+      "dob": "1980-05-15T04:00:00.000Z",
+      "work": "Library",
+      "status": "true"
+    },
+    {
+      "id": 5,
+      "name": "akdhfv",
+      "dob": "1980-05-15T04:00:00.000Z",
+      "work": "Nurse"
+    },
+    {
+      "id": 6,
+      "name": "akdhfv",
+      "dob": "1980-05-15T04:00:00.000Z",
+      "work": "Cleaner"
+    },
+    {
+      "id": 7,
+      "name": "akdhfv",
+      "dob": "1980-05-15T04:00:00.000Z",
+      "work": "Maintainence",
+      "status": "true"
+    },
+    {
+      "name": "Abhilash",
+      "dob": "1989-10-15T04:00:00.000Z",
+      "work": "Library",
+      "status": true,
+      "address": {
+        "line1": "fgc nmhkm",
+        "line2": "xhdgnck",
+        "city": "kavali",
+        "state": "AP",
+        "pincode": "524201",
+        "email": "abhi_makkena@yahoo.com",
+        "phone": "2244097155"
+      },
+      "id": 8
+    }
+  ]
+}

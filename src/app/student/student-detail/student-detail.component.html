@@ -1,0 +1,81 @@
+<div class="vc">
+    <div class="heading">
+        <h2> {{title}}</h2>
+    </div>
+    <form>
+        <div class="form-group row">
+            <label class="col-xs-12 col-md-2"> Name </label>
+            <div class="col-md-10 inline-control">
+                <div class="col-xs-12 col-md-3">
+                    <input class="form-control" type="text" placeholder="firstname" id="fn">
+                </div>
+                <div class="pad-tb npad-lr col-xs-12 col-md-3">
+                    <input class="form-control" type="text" placeholder="middlename" id="mn">
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <input class="form-control" type="text" placeholder="lastname" id="ln">
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-xs-12 col-md-2"> Date of Birth </label>
+            <!--<input class="col-xs-6 col-md-2" placeholder="MM/DD/YYYY">-->
+            <div class="col-xs-12 col-md-10">
+                <p-calendar [(ngModel)]="dob" name="dob" showIcon="true"></p-calendar>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-xs-12 col-md-2">SEX</label>
+            <div class="col-xs-12 col-md-10">
+                <label class="radio-inline"><input name="gender" type="radio" value="FEMALE"> Female</label>
+                <label class="radio-inline"><input name="gender" type="radio" value="MALE"> Male</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-xs-12 col-md-2"> Grade </label>
+            <div class="col-xs-12 col-md-2">
+                <select class="form-control">
+                <option selected> Select Grade </option>
+                <option *ngFor="let grade of grades"> {{grade.value}}</option>
+            </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-xs-12 col-md-2"> Address Line1 </label>
+            <div class="col-xs-12 col-md-8">
+                <input class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-xs-12 col-md-2"> Address Line2 </label>
+            <div class="col-xs-12 col-md-8">
+                <input class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-xs-12 col-md-2"> City </label>
+            <div class="col-xs-12 col-md-8">
+                <input class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group row">
+            <!--<div class="col-xs-4 col-md-6">-->
+            <label class="col-xs-12 col-md-2"> State </label>
+            <div class="col-xs-12 col-md-3">
+                <input class="form-control" type="text">
+            </div>
+            <!--</div>
+            <div class="col-xs-4 col-md-6">-->
+            <label class="pad-t col-md-offset-1 col-xs-12 col-md-1"> Pincode </label>
+            <div class="col-xs-12 col-md-3">
+                <input class="form-control" type="text">
+            </div>
+            <!--</div>-->
+        </div>
+        <div class="form-group row">
+            <div class="col-xs-12 col-md-2 col-md-offset-2">
+                <button class="margin-t btn btn-primary btn-block" type="submit"> Submit </button>
+            </div>
+        </div>
+    </form>
+</div>
